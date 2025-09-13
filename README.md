@@ -12,10 +12,10 @@ Before starting the pipeline, we need to prepare three files (`20220729_K562_1.f
 
     # Download fastq from SRA.
     cd data
-    prefetch -o ./SRRXXXXXXX.sra SRRXXXXXXX
-    fasterq-dump -O ./ ./SRRXXXXXXX.sra
-    pigz -p 8 -c ./SRRXXXXXXX.fastq
-    mv SRRXXXXXXX.fastq.gz 20220729_K562_1.fastq.gz
+    prefetch -o ./SRR35386206.sra SRR35386206
+    fasterq-dump -O ./ ./SRR35386206.sra
+    pigz -p 8 -c ./SRR35386206.fastq
+    mv SRR35386206.fastq.gz 20220729_K562_1.fastq.gz
 
 The `20220729_K562_1.fa` file is in FASTA format and contains all barcode sequences in the barcode whitelist (partial of `nanopore_96_barcodes.fa`). The content is as follows:
 
